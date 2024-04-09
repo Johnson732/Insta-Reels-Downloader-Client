@@ -25,12 +25,10 @@ export class InstaComponent {
         this.dataFetched = true;
         this.loading = false;
         this.videosrc=response;
-        console.log(response);
         this.openVideoInNewTab(this.videosrc);
       },(error: any) => {
         this.loading = false; // Stop loading animation
         this.err=error;
-        //console.error('Error fetching video source:', error);
     }
     )
   }
