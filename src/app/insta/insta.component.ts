@@ -27,7 +27,7 @@ export class InstaComponent {
         this.videosrc=response;
         this.openVideoInNewTab(this.videosrc);
       },(error: any) => {
-        this.loading = false; // Stop loading animation
+        this.loading = false; 
         this.err=error;
     }
     )
