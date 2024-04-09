@@ -1,0 +1,34 @@
+<!-- <input type="text"[(ngModel)]="userUrl">
+<button type="button" class="btn btn-link"></button> (click)="process()">Get Reel</button> -->
+
+
+<!-- <div class="input-group mb-3 d-flex flex-row justify-content-center align-items-center" style="width: 50%;">
+  <input type="text"[(ngModel)]="userUrl" class="form-control " placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+  <button class="btn btn-outline-primary" type="button" id="button-addon2"(click)="process()">Get Reel</button>
+</div> -->
+
+
+<div class="d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+
+  <div class="cookie-regular" >
+    <h1 style="font-size:3rem">Instagram Reels Downloader</h1>
+  </div>
+  <br>
+  <div class="input-group mb-3" style="width: 50%;" ngNativeValidate>
+    <input type="text" [(ngModel)]="userUrl" class="form-control cookie-regular" style="font-size:xx-large;color: blue;" placeholder="Paste video url link"  >
+    <button class="btn btn-success cookie-regular" style="font-size:xx-large;color: aliceblue;" type="button" id="button-addon2" (click)="process()"[disabled]="!userUrl">Get Reel</button>
+  </div>
+  <br>
+  <div *ngIf="loading"> <!-- Display loading spinner if data is being fetched -->
+    <div class="spinner-border text-warning" role="status">
+      <span class="sr-only"> </span>
+    </div>
+  </div>
+  <div *ngIf="err">
+    <div class="alert alert-danger" role="alert">
+      Invalid URL. Please enter a valid URL
+    </div>
+  </div>
+</div>
+
+
