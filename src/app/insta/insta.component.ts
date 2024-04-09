@@ -32,6 +32,9 @@ export class InstaComponent {
     }
     )
   }
+  openVideoInNewTab(url: string) {
+    window.open(url, '_blank');
+  }
 
   /*
   process2(){
@@ -46,9 +49,6 @@ export class InstaComponent {
   }
   */
 
-  openVideoInNewTab(url: string) {
-    window.open(url, '_blank');
-  }
 
 
 
